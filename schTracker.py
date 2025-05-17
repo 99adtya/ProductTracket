@@ -68,7 +68,7 @@ async def check_stock():
         # Get full page source and search for stock info
         page = driver.page_source
         if "Sold Out" in page:
-            await send_telegram_message("🔴 Out of Stock!")
+            pass  # Do nothing if out of stock
         else:
             await send_telegram_message("🟢 Amul whey protein(unflavoured) pack of 60 is IN STOCK!")
 
